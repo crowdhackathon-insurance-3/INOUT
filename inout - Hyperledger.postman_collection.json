@@ -1,0 +1,1676 @@
+{
+	"info": {
+		"_postman_id": "ce3f439f-c3f9-42f6-a048-a1f63266e2e2",
+		"name": "inout - Hyperledger",
+		"description": "LoopBack Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "system",
+			"item": [
+				{
+					"name": "Test the connection to the business network",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/system/ping",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all identities from the identity registry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root_url}}/api/system/identities",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"api",
+								"system",
+								"identities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the specified identity from the identity registry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/system/identities/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"identities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Issue an identity to the specified participant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/system/identities/issue",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"identities",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bind an identity to the specified participant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/system/identities/bind",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"identities",
+								"bind"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke the specified identity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http:///api/system/identities/:id/revoke",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"identities",
+								":id",
+								"revoke"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Historian Records from the Historian",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/system/historian",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"historian"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the specified Historian Record from the Historian",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/system/historian/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"system",
+								"historian",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for system"
+		},
+		{
+			"name": "org.inout.main.Claim",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Claim?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Claim"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Claim",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Claim"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Claim/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Claim",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replace attributes for a model instance and persist it into the data source.",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Claim/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Claim",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http:///api/org.inout.main.Claim/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Claim",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check whether a model instance exists in the data source.",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Claim/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Claim",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.Claim"
+		},
+		{
+			"name": "org.inout.main.Insuree",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root_url}}/api/org.inout.main.Insuree?",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"api",
+								"org.inout.main.Insuree"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"$class\": \"org.inout.main.Insuree\",\n    \"personID\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/api/org.inout.main.Insuree",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"api",
+								"org.inout.main.Insuree"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insuree/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insuree",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replace attributes for a model instance and persist it into the data source.",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insuree/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insuree",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insuree/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insuree",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check whether a model instance exists in the data source.",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insuree/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insuree",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.Insuree"
+		},
+		{
+			"name": "org.inout.main.Insurer",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root_url}}/api/org.inout.main.Insurer?",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"api",
+								"org.inout.main.Insurer"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"$class\": \"org.inout.main.Insurer\",\n    \"insuranceCompanyName\": \"string\",\n    \"personID\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/api/org.inout.main.Insurer",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"api",
+								"org.inout.main.Insurer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insurer/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insurer",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replace attributes for a model instance and persist it into the data source.",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insurer/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insurer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insurer/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insurer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check whether a model instance exists in the data source.",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.Insurer/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.Insurer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.Insurer"
+		},
+		{
+			"name": "org.inout.main.RepairShopEmployee",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.RepairShopEmployee?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.RepairShopEmployee"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"$class\": \"org.inout.main.RepairShopEmployee\",\n    \"repairShopName\": \"string\",\n    \"personID\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/api/org.inout.main.RepairShopEmployee",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"api",
+								"org.inout.main.RepairShopEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.RepairShopEmployee/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.RepairShopEmployee",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replace attributes for a model instance and persist it into the data source.",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.RepairShopEmployee/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.RepairShopEmployee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http:///api/org.inout.main.RepairShopEmployee/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.RepairShopEmployee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check whether a model instance exists in the data source.",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.RepairShopEmployee/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.RepairShopEmployee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.RepairShopEmployee"
+		},
+		{
+			"name": "org.inout.main.InitialClaimApplication",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.InitialClaimApplication?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.InitialClaimApplication"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.InitialClaimApplication",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.InitialClaimApplication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.InitialClaimApplication/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.InitialClaimApplication",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.InitialClaimApplication"
+		},
+		{
+			"name": "org.inout.main.ApproveByRepairShop",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.ApproveByRepairShop?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.ApproveByRepairShop"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.ApproveByRepairShop",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.ApproveByRepairShop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.ApproveByRepairShop/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.ApproveByRepairShop",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.ApproveByRepairShop"
+		},
+		{
+			"name": "org.inout.main.ApprovedByInsurance",
+			"item": [
+				{
+					"name": "Find all instances of the model matched by filter from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.ApprovedByInsurance?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.ApprovedByInsurance"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new instance of the model and persist it into the data source.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Model instance data"
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.ApprovedByInsurance",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.ApprovedByInsurance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a model instance by {{id}} from the data source.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/xml, application/javascript, text/javascript"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/org.inout.main.ApprovedByInsurance/:id?filter={{filter}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"org.inout.main.ApprovedByInsurance",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{{filter}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for org.inout.main.ApprovedByInsurance"
+		}
+	]
+}
